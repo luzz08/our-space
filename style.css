@@ -19,7 +19,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(40%);
+  filter: brightness(30%);
 }
 .vhodnaya {
   position: fixed;
@@ -35,6 +35,18 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 55px;
+  animation: poevlenie 3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes poevlenie {
+  from {
+    opacity: 0;
+    transform: translateY(-35%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
 }
 h1 {
   font-size: 55px;
@@ -55,11 +67,11 @@ h1 {
   margin-bottom: 55px;
 }
 .login {
-  background-color: rgb(255, 185, 239);
+  background-color: rgb(222, 169, 228);
   border: none;
   border-radius: 35px;
   padding: 12px 100px;
-  color: rgb(30, 0, 36);
+  color: rgb(57, 0, 69);
   font-size: 25px;
   transition: 0.2s;
   font-weight: 500;
@@ -73,6 +85,18 @@ h1 {
   display: none;
   flex-direction: column;
   gap: 0px;
+  animation: vsplytie 3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes vsplytie {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .name {
   background-color: rgb(49, 23, 45);
